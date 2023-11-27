@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoàng Như Lan 22130139- lab5</title>
+     <!-- font  -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="background-content"></div>
+    <div>
+        <div id="menu">
+            <ul>
+                <li><a href="">Trang chủ</a></li>
+                <li><a style="color: rgb(98, 98, 99);" href="">Đặt bàn</a></li>
+                <li><a href="">Nhà hàng uy tín</a></li>
+                <li><a href="">Ưu đãi hot</a></li>
+                <li><a href="">Mới nhất</a></li>
+            </ul>
+        </div>
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 4</div>
+              <img class="imagine" src="img/dookki.png" style="width: 100%;">
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img class="imagine" src="img/cheese_dookki.png" style="width:100%">
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img class="imagine" src="img/cheese2_dookki.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 4</div>
+              <img class="imagine" src="img/meal.png" style="width:100%">
+            </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+        <!-- <img class="imagine" src="img/dookki.png" alt=""> -->
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+            <div class="content">
+                <h4> Dookki Vietnam - Chi nhánh Vincom Thủ Đức</h4>
+                <p class="line-1">Buffet món hàn - Gia đình, hội nhóm,...</p>
+                <p class="line-2">Địa chỉ: Tầng 4, 216 Võ Văn Ngân, Thủ Đức, TP.HCM</p>
+                <i class="fa-solid fa-clock fa-2x" style="color: #f5f5f5; margin-left: 16.3%; "></i>
+                <p class="line-3">Đang mở cửa</p>
+                <span>11:00 - 22:00</span>
+                <i class="fa-solid fa-tag fa-2x" style="color: #ffffff; margin-left: 16.3%; margin-top: 20px;"></i>
+                <p class="line-4">139.000 đồng / người lớn</p>
+                <p class="line-5">69.000 đồng / trẻ em</p>
+                <p class="line-6">Lưu ý: Giá vé chưa bao gồm VAT</p>
+            </div>
+            <div class="background2-content"></div>
+            <div class="content2">
+                <p class="line-7"> <i> Thông tin đặt chỗ nhà hàng Dookki - Vincom Thủ Đức</i></p>
+                <div class="tag-content">
+                    <p><i class="fa-solid fa-circle" style="color: #ffffff; margin-right: 10px;"></i>Quý khách vui lòng đặt chỗ trước ít nhất 45 phút để được phục vụ tốt nhất</p>
+                    <p><i class="fa-solid fa-circle" style="color: #ffffff;margin-right: 10px;"></i>Bàn đặt của quý khách được giữ tối đa 20 phút</p>
+                    <p><i class="fa-solid fa-circle" style="color: #ffffff;margin-right: 10px;"></i>Nhà hàng quy định không mang đồ ăn, thức uống từ ngoài vào</p>
+                    <p><i class="fa-solid fa-circle" style="color: #ffffff;margin-right: 10px;"></i>Dooki nhận đặt số lượng lớn từ 15 khách trở lên</p>
+                </div>
+                <i class="fa-solid fa-phone fa-4x" style="color: rgb(169, 7, 7); margin-left: 17%; margin-top: 40px;"></i>
+                <button class="btn-call">Gọi điện đặt bàn số lượng lớn!</button>
+
+            </div>
+            <form class="background-form">
+              <h3 style="display: inline-block;margin-left: 39%; margin-top: 30px; font-size: 30px; color: white;">Đặt chỗ</h3>
+              <p style="text-align: center; margin-top: -20px; color:  rgb(17, 255, 55);">Đặt bàn giữ chỗ</p>
+              <i class="fa-solid fa-user fa-2x " style="color: #ffffff; margin-left: 40px; margin-top: 20px;"></i>
+              <label for="adult" style="color: white; margin-left: 10px; font-size: 20px;">Người lớn:</label>
+              <select name="sAdult" id="txtSoNguoiLon" style="width: 45%; height: 40px; margin-left: 5px;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option> 
+              </select>
+              <br>
+              <i class="fa-solid fa-baby fa-3x" style="color: #ffffff; margin-top: 30px; margin-left: 35px; "></i>
+              <label for="adult" style="color: white; margin-left: 10px; font-size: 20px;">Trẻ em:</label>
+              <select name="sAdult" id="txtSoNguoiLon" style="width: 45%; height: 40px; margin-left: 20px;">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+              </select>
+              <br>
+              <i class="fa-solid fa-clock fa-2x" style="color: #ffffff; margin-left: 40px; margin-top: 30px;"></i>
+              <label for="adult" style="color: white; margin-left: 10px; font-size: 20px;">Thời gian đến:</label> <br>
+              <input type="date" id="txtNgayDen" name="sDate" style="width: 45%; height: 40px; margin-left: 40px; margin-top: 20px;">
+              <input type="time" id="txtNgayDen" name="sTime" style="width: 45%; height: 40px; margin-left: 40px; margin-top: 20px;"> <br>
+              <input type="button" onclick="alert('Bạn đã tạo đơn thành công!')" value="Tạo đơn" class="btn-add">
+
+
+            </form>
+
+    </div>
+    
+</body>
+</html>
