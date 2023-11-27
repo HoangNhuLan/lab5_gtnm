@@ -6,11 +6,11 @@
     background-color: rgb(52, 1, 1) ;
     width: 75%;
     margin-left: 12%;
-    height: 97em;
+    height: 120em;
 }
 #menu{
     display: block;
-    margin-top: -81%;
+    margin-top: -101%;
 }
 ul{
     display: flex;
