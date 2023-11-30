@@ -2,6 +2,7 @@
     font-family: 'Roboto', sans-serif;
 }
 #background-content{
+    display: block;
     background-color: rgb(52, 1, 1) ;
     max-width: 1420px;
     margin-left: 225px;
@@ -28,6 +29,7 @@ ul li a{
     color: rgb(217, 217, 217);
 }
 .imagine{
+    display: block;
     margin-top: 20px;
     /* width: 120px; */
     height: 600px;
